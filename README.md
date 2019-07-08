@@ -18,7 +18,7 @@ Tool (hopefully tools) used to analyze somewhat formatted legal documents downlo
 
 >retrieve_clauses(result)
 
-    clause 
+clause 
 
 1 中华人民共和国刑法三百五十九条一款
 
@@ -38,12 +38,12 @@ Tool (hopefully tools) used to analyze somewhat formatted legal documents downlo
 
 >for (i in 1:nrow(file)){                      #file改成法律文书所在的数据框对象名
 
-  >if (file[i,4]!=""){                         #4改成“判决结果”所在的那一列
+  >&nbsp &nbsp if (file[i,4]!=""){                         #4改成“判决结果”所在的那一列
   
-   >temp <- retrieve_clauses(file[i,4])
+   >&nbsp &nbsp &nbsp &nbsp temp <- retrieve_clauses(file[i,4])
     
-   >clauses <- rbind(clauses, temp)
+   >&nbsp &nbsp &nbsp &nbsp clauses <- rbind(clauses, temp)
     
-  >}
+  >&nbsp &nbsp }
   
 >}
