@@ -1,7 +1,7 @@
 # NLP of legal documents
 Tool (hopefully tools) used to analyze somewhat formatted legal documents downloaded from http://openlaw.cn/
 
-用来分析["OpenLaw"](http://openlaw.cn/)上下载得到的法律文书的R语言工具
+用来分析[OpenLaw](http://openlaw.cn/)上下载得到的法律文书的R语言工具
 
 -------------------------------------------------------------
 ## 从“判决结果”一栏提取判决所引用的法条
