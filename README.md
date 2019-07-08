@@ -8,7 +8,7 @@ Tool (hopefully tools) used to analyze somewhat formatted legal documents downlo
 
 使用说明：将“retrieve_clauses.R”下载到工作路径里即可
 
-例1：单个使用
+####例1：单个使用
 
 library(stringr)
 
@@ -26,7 +26,7 @@ result <- "依照《中华人民共和国刑法》第三百五十九条第一款
 
 >3         中华人民共和国刑法五十三条
 
-例2：批量使用
+####例2：批量使用
 
 library(stringr)
 
@@ -36,14 +36,14 @@ clauses <- data.frame(clause=character(0))  \#建一个用来储存结果的数�
 
 clauses$clause <- as.character(clauses$clause)
 
-**for (i in 1:nrow(file)){**                      \#file改成法律文书所在的数据框对象名
+for (i in 1:nrow(file)){                      \#file改成法律文书所在的数据框对象名
 
-  **if (file[i,4]!=""){**                         \#4改成“判决结果”所在的那一列
+  if (file[i,4]!=""){                         \#4改成“判决结果”所在的那一列
   
-   **temp <- retrieve_clauses(file[i,4])**
+   temp <- retrieve_clauses(file[i,4])
     
-   **clauses <- rbind(clauses, temp)**
+   clauses <- rbind(clauses, temp)
     
-  **}**
+  }
   
-**}**
+}
