@@ -32,18 +32,18 @@ clause
 
 >source("retrieve_clauses.R")
 
->clauses <- data.frame(clause=character(0))  #建一个用来储存结果的数据框
+>clauses <- data.frame(clause=character(0))  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#建一个用来储存结果的数据框
 
 >clauses$clause <- as.character(clauses$clause)
 
->for (i in 1:nrow(file)){                      #file改成法律文书所在的数据框对象名
+>for (i in 1:nrow(file)){                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#file改成法律文书所在的数据框对象名
 
-  >&nbsp &nbsp if (file[i,4]!=""){                         #4改成“判决结果”所在的那一列
+  >&nbsp;&nbsp;if (file[i,4]!=""){                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#4改成“判决结果”所在的那一列
   
-   >&nbsp &nbsp &nbsp &nbsp temp <- retrieve_clauses(file[i,4])
+   >&nbsp;&nbsp;&nbsp;&nbsp;temp <- retrieve_clauses(file[i,4])
     
-   >&nbsp &nbsp &nbsp &nbsp clauses <- rbind(clauses, temp)
+   >&nbsp;&nbsp;&nbsp;&nbsp;clauses <- rbind(clauses, temp)
     
-  >&nbsp &nbsp }
+  >&nbsp;&nbsp;}
   
 >}
